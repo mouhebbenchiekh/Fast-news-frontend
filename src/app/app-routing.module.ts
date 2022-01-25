@@ -20,7 +20,7 @@ import { AuthGuard } from './shared/auth.guard';
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  { path: '', component: AppComponent, pathMatch: 'full' },
+  //{ path: '', component: AppComponent, pathMatch: 'full' },
   { path: 'log-in', component: LoginComponent },
   { path: 'sign-up', component: RegisterComponent },
   {
