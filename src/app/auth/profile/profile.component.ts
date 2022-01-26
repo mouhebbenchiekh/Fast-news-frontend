@@ -10,13 +10,9 @@ import { AuthService } from './../../shared/auth.service';
 export class ProfileComponent implements OnInit {
   currentUser: any = {};
 
-  constructor(
-    public authService: AuthService,
-    private actRoute: ActivatedRoute
-  ) {
-    let id = this.actRoute.snapshot.paramMap.get('id');
-    this.authService.getUserProfile(id!).subscribe((res) => {
-      this.currentUser = res.msg;
+  constructor(public authService: AuthService) {
+    this.authService.getUserProfile().subscribe((res) => {
+      this.currentUser = res;
     });
   }
 

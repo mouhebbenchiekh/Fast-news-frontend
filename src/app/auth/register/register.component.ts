@@ -17,7 +17,7 @@ export class RegisterComponent implements OnInit {
     public router: Router
   ) {
     this.signupForm = this.fb.group({
-      name: [''],
+      username: [''],
       email: [''],
       mobile: [''],
       password: [''],
