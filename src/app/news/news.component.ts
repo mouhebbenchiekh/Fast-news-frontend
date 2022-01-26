@@ -25,6 +25,7 @@ export class NewsComponent implements OnInit {
   }
 
   async getPdf() {
+    this.pdfSrc=""
     let url = await this.newsService.getPdfUrl(this.topic);
     this.pdfSrc = url;
   }
