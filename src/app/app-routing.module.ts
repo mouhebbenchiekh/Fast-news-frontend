@@ -18,6 +18,7 @@ import { ProfileComponent } from './auth/profile/profile.component';
 
 import { AuthGuard } from './shared/auth.guard';
 import { AppComponent } from './app.component';
+import { NewsComponent } from './news/news.component';
 
 const routes: Routes = [
   //{ path: '', component: AppComponent, pathMatch: 'full' },
@@ -26,6 +27,11 @@ const routes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'news/:topic',
+    component: NewsComponent,
     canActivate: [AuthGuard],
   },
 ];

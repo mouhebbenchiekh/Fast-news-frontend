@@ -10,6 +10,7 @@ import { NbThemeModule, NbLayoutModule, NbSearchModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { AuthInterceptor } from './shared/authconfig.interceptor';
 import { AuthModule } from './auth/auth.module';
+import { NewsModule } from './news/news.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,6 +26,7 @@ import { AuthModule } from './auth/auth.module';
     AuthModule,
     ReactiveFormsModule,
     FormsModule,
+    NewsModule
   ],
   providers: [
     {
