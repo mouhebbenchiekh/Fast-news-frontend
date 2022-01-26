@@ -1,8 +1,12 @@
-<p>news : {{topic}} </p>
-<button (click)="printPdf()">Print or Download Pdf </button>
-<pdf-viewer  
-    [src]="pdfSrc"
-    [render-text]="true"
-    [original-size]="false"
-    style="width: 400px; height: 500px"
-></pdf-viewer>
+<p>news : {{ topic }}</p>
+<button (click)="printPdf()">Print or Download Pdf</button>
+<nb-card [nbSpinner]="!pdfSrc" nbSpinnerSize="giant" nbSpinnerStatus="primary">
+  <nb-card-body>
+    <pdf-viewer
+      [src]="pdfSrc"
+      [render-text]="true"
+      [original-size]="true"
+      style="width: 100vw; height: 100vh"
+    ></pdf-viewer>
+  </nb-card-body>
+</nb-card>

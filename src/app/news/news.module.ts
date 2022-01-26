@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { NewsComponent } from "./news.component";
 import { PdfViewerModule } from 'ng2-pdf-viewer';
-
+import { NbCardModule, NbSpinnerModule } from "@nebular/theme";
 
 @NgModule({
     providers:[
@@ -13,7 +13,9 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     ],
     imports: [
 
-        PdfViewerModule
+        PdfViewerModule,
+        NbSpinnerModule,
+        NbCardModule
     ],
     bootstrap:[NewsComponent]
 })
