@@ -28,7 +28,6 @@ export class AuthService {
   // Sign-in
   signIn(user: User) {
     
-    console.log(user)
     return this.http
       .post<any>(`${this.endpoint}/auth/login`, user)
       .subscribe((res: any) => {

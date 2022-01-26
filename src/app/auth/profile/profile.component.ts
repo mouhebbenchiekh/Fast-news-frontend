@@ -12,9 +12,14 @@ export class ProfileComponent implements OnInit {
 
   constructor(public authService: AuthService) {
     this.authService.getUserProfile().subscribe((res) => {
+      console.log(res)
       this.currentUser = res;
     });
   }
 
   ngOnInit() {}
+
+  logout(){
+    this.authService.doLogout()
+  }
 }
