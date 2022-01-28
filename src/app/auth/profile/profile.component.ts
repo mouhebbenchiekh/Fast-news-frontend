@@ -9,12 +9,12 @@ import { AuthService } from './../../shared/auth.service';
 })
 export class ProfileComponent implements OnInit {
   currentUser: any = {};
-
+                                           
   constructor(public authService: AuthService) {
     this.authService.getUserProfile().subscribe((res) => {
-     
+                                                
       this.currentUser = res;
-    });
+    });                                                                                      
   }
 
   ngOnInit() {}
@@ -23,3 +23,4 @@ export class ProfileComponent implements OnInit {
     this.authService.doLogout()
   }
 }
+                                                                                      

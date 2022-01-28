@@ -6,8 +6,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [LoginComponent, RegisterComponent, ProfileComponent],
-  imports: [CommonModule, ReactiveFormsModule, FormsModule],
-  exports: [],
-})
+  declarations: [LoginComponent, RegisterComponent, ProfileComponent],                                                                                      
+  imports: [CommonModule, ReactiveFormsModule, FormsModule],                                                                                      
+  exports: [],                                                                                      
+})                                                                                      
 export class AuthModule {}

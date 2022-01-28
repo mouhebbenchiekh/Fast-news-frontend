@@ -11,13 +11,13 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   signinForm: FormGroup;
 
-  constructor(
-    public fb: FormBuilder,
-    public authService: AuthService,
-    public router: Router
-  ) {
-    this.signinForm = this.fb.group({
-      email: [''],
+  constructor(                       
+    public fb: FormBuilder,                                           
+    public authService: AuthService,                                           
+    public router: Router                                           
+  ) {                                           
+    this.signinForm = this.fb.group({                                           
+      email: [''],                                           
       password: [''],
     });
   }

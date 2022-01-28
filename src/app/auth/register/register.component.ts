@@ -10,13 +10,13 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
   signupForm: FormGroup;
-
-  constructor(
-    public fb: FormBuilder,
-    public authService: AuthService,
-    public router: Router
+                                                                                      
+  constructor(                                           
+    public fb: FormBuilder,                                           
+    public authService: AuthService,                                           
+    public router: Router                                           
   ) {
-    this.signupForm = this.fb.group({
+    this.signupForm = this.fb.group({                                           
       username: [''],
       email: [''],
       mobile: [''],

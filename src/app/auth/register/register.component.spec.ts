@@ -8,15 +8,15 @@ describe('RegisterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RegisterComponent ]
+      declarations: [ RegisterComponent ]                                           
     })
     .compileComponents();
   });
-
+                                                                                      
   beforeEach(() => {
     fixture = TestBed.createComponent(RegisterComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    fixture.detectChanges();                                                                                                                                 
   });
 
   it('should create', () => {
