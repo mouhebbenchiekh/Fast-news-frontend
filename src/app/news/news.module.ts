@@ -3,16 +3,16 @@ import { NewsComponent } from "./news.component";
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { NbCardModule, NbSpinnerModule } from "@nebular/theme";
 
-@NgModule({
-    providers:[
-        { provide: Window, useValue: window },
-        
-    ],
-    declarations: [
-        NewsComponent
-    ],
-    imports: [
-
+@NgModule({                                           
+    providers:[                                           
+        { provide: Window, useValue: window },                                                                                      
+                                                   
+    ],                                           
+    declarations: [                                           
+        NewsComponent                                           
+    ],                                                                                      
+    imports: [                                           
+                                           
         PdfViewerModule,
         NbSpinnerModule,
         NbCardModule

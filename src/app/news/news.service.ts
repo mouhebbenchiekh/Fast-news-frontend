@@ -2,17 +2,16 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError, firstValueFrom, Observable } from 'rxjs';
 import * as es6printJS from "print-js";
-// import printJS = require("print-js");
 
 
 @Injectable()
 export class NewsService {
   constructor(private http: HttpClient) { }
 
-  async getPdfUrl(topic:string): Promise<string> {
+  async getPdfUrl(topic:string): Promise<string> {                                                                                      
 
     let pdfUrl = '';
-    
+                                                                                          
 
 
 
@@ -20,7 +19,7 @@ export class NewsService {
 
     const pdfBlob = new Blob([response], { type: "application/pdf" });
     const url: string = URL.createObjectURL(pdfBlob);
-
+                                                                                      
     return url
 
   }
@@ -29,8 +28,5 @@ export class NewsService {
 
     es6printJS(url);
 
-  }
-
-
-
+  }                                  
 }

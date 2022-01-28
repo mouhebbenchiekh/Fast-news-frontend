@@ -5,32 +5,32 @@ import { NewsService } from './news.service';
 @Component({
   selector: 'news',
   templateUrl: './news.component.html',
-  providers: [NewsService],
-})
+  providers: [NewsService],                                           
+})                                           
 export class NewsComponent implements OnInit {
-  pdfSrc = '';
+  pdfSrc = '';                                           
   topic = '';
-
-  constructor(
-    private newsService: NewsService,
-    private window: Window,
-    private route: ActivatedRoute
-  ) {}
-
-  ngOnInit(): void {
-    this.route.params.subscribe((params: Params) => {
-      this.topic = params['topic'];
-      this.getPdf()
-    });
-  }
-
-  async getPdf() {
-    this.pdfSrc=""
-    let url = await this.newsService.getPdfUrl(this.topic);
-    this.pdfSrc = url;
-  }
-
-  printPdf() {
-    this.newsService.printPdf(this.pdfSrc);
-  }
-}
+                                                                                                                                 
+  constructor(                                           
+    private newsService: NewsService,                                           
+    private window: Window,                                           
+    private route: ActivatedRoute                                           
+  ) {}                                           
+                                           
+  ngOnInit(): void {                                           
+    this.route.params.subscribe((params: Params) => {                                           
+      this.topic = params['topic'];                                           
+      this.getPdf()                                           
+    });                                           
+  }                                           
+                                           
+  async getPdf() {                                           
+    this.pdfSrc=""                                           
+    let url = await this.newsService.getPdfUrl(this.topic);                                           
+    this.pdfSrc = url;                                           
+  }                                           
+                                           
+  printPdf() {                                           
+    this.newsService.printPdf(this.pdfSrc);                                           
+  }                                           
+}                                           
