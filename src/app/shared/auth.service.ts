@@ -8,19 +8,19 @@ import {
   HttpErrorResponse,
 } from '@angular/common/http';
 import { Router } from '@angular/router';
-
-@Injectable({
-  providedIn: 'root',
-})
-export class AuthService {
+                                               
+@Injectable({                                               
+  providedIn: 'root',                                               
+})                                               
+export class AuthService {                                               
   endpoint: string = 'http://localhost:3000';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
-  currentUser = {};
-
+  currentUser = {};                                               
+                                               
   constructor(private http: HttpClient, public router: Router) {}
 
-  // Sign-up
-  signUp(user: User): Observable<any> {
+  // Sign-up                                               
+  signUp(user: User): Observable<any> {                                               
     let api = `${this.endpoint}/users/addUser`;
     return this.http.post(api, user).pipe(catchError(this.handleError));
   }
@@ -39,7 +39,7 @@ export class AuthService {
         });
       });
   }
-
+//getoken
   getToken() {
     return localStorage.getItem('access_token');
   }
@@ -48,7 +48,7 @@ export class AuthService {
     let authToken = localStorage.getItem('access_token');
     return authToken !== null ? true : false;
   }
-
+  //logout
   doLogout() {
     let removeToken = localStorage.removeItem('access_token');
     if (removeToken == null) {
